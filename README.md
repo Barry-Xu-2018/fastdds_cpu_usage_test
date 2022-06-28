@@ -30,3 +30,9 @@ You can run multi publishers with different topic key.
 $ cd build
 $ ./DDSHelloWorldExample subscriber
 ```
+Use below command to check CPU usage.   
+```bash
+$ S_COLORS=never pidstat -h -u -p SUBSCRIBER_PID 1
+```
+You should install `sysstat` package.  
+
