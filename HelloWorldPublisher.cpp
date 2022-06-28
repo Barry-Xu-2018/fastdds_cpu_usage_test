@@ -219,8 +219,10 @@ bool HelloWorldPublisher::publish(
 {
     if (listener_.firstConnected_ || !waitForListener || listener_.matched_ > 0)
     {
-        hello_.id(hello_.id() + 1);  // id is increased from 0 and step is 1.
+        auto val = hello_.id() + 1;
+        hello_.id(val);  // id is increased from 0 and step is 1.
         hello_.index(key_);
+        hello_.data()[val] = static_cast<char>(val);
         writer_->write(&hello_);
 
         return true;
