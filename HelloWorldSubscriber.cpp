@@ -83,7 +83,7 @@ bool HelloWorldSubscriber::init()
 
     //CREATE THE TOPIC
     topic_ = participant_->create_topic(
-        "HelloWorldTopic",
+        "fastdds_cpu_usage_test",
         "HelloWorld",
         TOPIC_QOS_DEFAULT);
 

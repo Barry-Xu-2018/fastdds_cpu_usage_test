@@ -97,7 +97,7 @@ bool HelloWorldPublisher::init()
         return false;
     }
 
-    topic_ = participant_->create_topic("HelloWorldTopic", "HelloWorld", TOPIC_QOS_DEFAULT);
+    topic_ = participant_->create_topic("fastdds_cpu_usage_test", "HelloWorld", TOPIC_QOS_DEFAULT);
 
     if (topic_ == nullptr)
     {
