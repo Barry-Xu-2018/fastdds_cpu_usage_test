@@ -1,0 +1,7 @@
+struct HelloWorld
+{
+    @Key unsigned long index;
+    unsigned long      id;
+    string             description;
+    char               data[512];
+};
