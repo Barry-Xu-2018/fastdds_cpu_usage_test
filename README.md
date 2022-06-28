@@ -32,7 +32,7 @@ $ ./DDSHelloWorldExample subscriber
 ```
 Use below command to check CPU usage.   
 ```bash
-$ S_COLORS=never pidstat -h -u -p SUBSCRIBER_PID 1
+$ S_COLORS=never pidstat -h -u -p $(ps -ef | grep "DDSHelloWorldExample subscriber" | grep -v grep | awk '{print $2}') 1
 ```
 You should install `sysstat` package.  
 
